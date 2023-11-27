@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<!-- Why doesn't this code work? -->
+
+<button @onclick="Button_Click">Click Me</button>
+<p>@Message</p>
+
+@code {
+
+    string Message { get; set; } = string.Empty;
+
+    void Button_Click()
+    {
+        Message = $"Button clicked at {DateTime.Now.ToLongTimeString()}";
+    }
+}
